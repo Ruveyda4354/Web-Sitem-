@@ -1,3 +1,6 @@
+<?php
+$error=isset($_GET['error'])? $_GET['error']:'';
+?>
 <!DOCTYPE html>
 <html lang="tr">
 
@@ -8,10 +11,20 @@
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 </head>
 <body>
+    <?php if($error=='empty'):?>
+        <div class="alert alert-warning text-center" role="alert" style="margin-bottom:1rem;">
+        Kullanıcı adı veya şifre alanlarını boş bırakmayın!
+        </div>
+        <?php elseif ($error=='invalid'): ?>
+            <div class="alert alert-danger text-center" role="alert" style="margin-bottom:1rem;">
+                Kullanıcı adı veya şifre hatalı!
+        </div>
+        <?php endif; ?>
+        
     <main class="d-flex justify-content-center align-items-center vh-100">
         <div class="container" style="max-width: 500px;">
             <div class="bg white p-4 rounded shadow text-center">
-                <form action="sunucu.php" method="post" id="loginForm">
+                <form action="sunucu.php" method="POST" id="loginForm">
                     <h1 class="h3 mb-3 fw-normal text-center">Giriş Yap</h1>
                     <div class="form-floating mb-3">
                         <input type="email" class="form-control" id="kullaniciAdi" name="kullaniciAdi" placeholder="name@example.com">
@@ -43,10 +56,6 @@
                 return;
             }
         }); 
-        const params=new URLSearchParams(window.location.search);
-        if(params.get("error")==="1"){
-            alert("Kullanıcı adı veya şifre yanlış.");
-        }
     </script>
     <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
