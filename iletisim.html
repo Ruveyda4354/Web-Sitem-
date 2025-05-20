@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>İletişim Sayfası</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="stil.css">
+</head>
+
+<body class="iletisim">
+    <nav>
+        <div class="navbar">
+            <a href="login.php">Giriş Sayfası</a>
+            <a href="hakkinda.html">Hakkımda</a>
+            <a href="ozgecmis.html">Öz Geçmiş</a>
+            <a href="ilgialani.php">İlgi Alanım</a>
+            <a href="mirasimiz.html">Mirasımız</a>
+            <a href="sehrim.html">Şehrim</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="login.php">Çıkış Yap</a>
+        </div>
+    </nav>
+    <header>
+        <h1> İletişim Sayfası</h1>
+    </header>
+
+    <div id="app">
+        <div class="container">
+            <form @submit.prevent="vueilegonder">
+                <label>Ad Soyad:
+                    <input type="text" v-model="form.adsoyad">
+                </label>
+                <label>E-posta:
+                    <input type="text" v-model="form.email">
+                </label>
+                <label>Telefon:
+                    <input type="text" v-model="form.tel">
+                </label>
+                <label>Cinsiyet:
+                    <label class="radio-label"><input type="radio" value="Kadın" v-model="form.cinsiyet">Kadın</label>
+                    <label class="radio-label"><input type="radio" value="Erkek" v-model="form.cinsiyet">Erkek</label>
+                </label>
+                <label>Konu:
+                    <select v-model="form.konu">
+                        <option disabled value="">Seçiniz</option>
+                        <option>Bilgi</option>
+                        <option>Şikayet</option>
+                        <option>Öneri</option>
+                    </select>
+                </label>
+                <label>Mesaj:
+                    <textarea rows="4" v-model="form.mesaj"></textarea>
+                </label>
+                <label>
+                    <input type="checkbox" v-model="form.haber">Haber almak istiyorum.
+                </label>
+                <div class="error" v-if="hata">{{hata}}</div>
+                <button type="button" @click="jsilegonder">Gönder(JS)</button>
+                <button type="submit">Gönder(Vue)</button>
+                <button type="button" @click="temizle">Temizle</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                form: {
+                    adsoyad: '',
+                    email: '',
+                    tel: '',
+                    cinsiyet: '',
+                    konu: '',
+                    mesaj: '',
+                    haber: false
+                },
+                hata: ''
+            },
+            methods: {
+                jsilegonder() {
+                    const f = this.form;
+                    if (!f.adsoyad.trim() || !f.email.trim() || !f.tel.trim() || !f.cinsiyet.trim() || !f.konu.trim() || !f.mesaj.trim()) {
+                        alert("Lütfen tüm alanları doldurun.");
+                        return;
+                    }
+                    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.trim())) {
+                        alert("Geçerli bir e-posta adresi giriniz.");
+                        return;
+                    }
+                    if (!/^\d+$/.test(f.tel.trim())) {
+                        alert("Telefon numarası sadece rakamlardan oluşmalıdır.");
+                        return;
+                    }
+                    localStorage.setItem("formData", JSON.stringify(f));
+                    window.location.href = "iletisimSonuc.html";
+                },
+                vueilegonder() {
+                    const f = this.form;
+                    if (!f.adsoyad.trim() || !f.email.trim() || !f.tel.trim() || !f.cinsiyet.trim() || !f.konu.trim() || !f.mesaj.trim()) {
+                        this.hata = "Lütfen tüm alanları doldurun.";
+                        return;
+                    }
+                    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.trim())) {
+                        this.hata = "Geçerli bir e-posta adresi giriniz.";
+                        return;
+                    }
+                    if (!/^\d+$/.test(f.tel.trim())) {
+                        this.hata = "Telefon numarası sadece rakamlardan oluşmalıdır.";
+                        return;
+                    }
+                    this.hata = '';
+                    localStorage.setItem("formData", JSON.stringify(f));
+                    window.location.href = "iletisimSonuc.html";
+                },
+                temizle() {
+                    this.form = {
+                        adsoyad: '',
+                        email: '',
+                        tel: '',
+                        cinsiyet: '',
+                        konu: '',
+                        mesaj: '',
+                        haber: false
+                    };
+                    this.hata = '';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
