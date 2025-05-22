@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carousel Template · Bootstrap v5.3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="stil.css">
+</head>
+
+<body class="mirasimiz">
+    <nav>
+        <div class="navbar">
+            <a href="login.php">Giriş Sayfası</a>
+            <a href="hakkinda.html">Hakkımda</a>
+            <a href="ozgecmis.html">Öz Geçmiş</a>
+            <a href="ilgialani.php">İlgi Alanım</a>
+            <a href="mirasimiz.html">Mirasımız</a>
+            <a href="sehrim.html">Şehrim</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="login.php">Çıkış Yap</a>
+        </div>
+    </nav>
+    <header>
+        <h1>Mirasımız</h1>
+    </header>
+    <main>
+        <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="frig.jpg" class="d-block w-100" alt="Frig Vadisi">
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                            <h1>Frigler ve Efsanevi Kralları Midas</h1>
+                            <p>Frig Vadisi, Eskişehir – Kütahya – Afyon arasında kalan, bundan 3000 yıl önce
+                                Frigyalıların kayalara evler, kaleler, anıtlar oyularak kurduğu, kocaman bir medeniyet
+                                ve enfes bir coğrafya.</p>
+                            <p><a class="btn btn-lg btn-primary"
+                                    href="https://www.kutahya.bel.tr/tarihiyerler.asp?islem=goster&id=22">Detayları
+                                    Öğren</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="kale.jpg" class="d-block w-100" alt="Kütahya Kalesi">
+                    <div class="container">
+                        <div class="carousel-caption text-end">
+                            <h1>Kütahya Ulaşın</h1>
+                            <p>Kütahya Kalesi, Kütahya şehrinde Bizanslılar'dan kalma kale.</p>
+                            <p><a class="btn btn-lg btn-warning"
+                                    href="https://tr.wikipedia.org/wiki/K%C3%BCtahya_Kalesi">Daha Fazla Bilgi Edin</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="aizanoi2.jpg" class="d-block w-100" alt="Bilgi Öğren">
+                    <div class="container">
+                        <div class="carousel-caption text-end">
+                            <h1>Bilgi Öğren</h1>
+                            <p>Tarihin binlerce yıllık şahidi, insanlığın ortak mirası, zamana meydan okuyan görkemli
+                                yapısıyla, Türkiye’nin en güzel antik kentlerinden biri Aizanoi Antik Kenti…</p>
+                            <p><a class="btn btn-lg btn-warning"
+                                    href="https://www.kulturportali.gov.tr/turkiye/kutahya/gezilecekyer/azano-antk-kent">Bilgi
+                                    Ediniz</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next"> <span
+                    class="carousel-control-next-icon" aria-hidden="true"></span> <span
+                    class="visually-hidden">Next</span> </button>
+        </div>
+        <div class="container marketing">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 text-center">
+                    <img src="yemek.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140"
+                        alt="Yemekler">
+                    <h2 class="fw-normal">Yemekler</h2>
+                    <p>Kütahya yöresine özgü yemekler</p>
+                    <p><a class="btn btn-secondary"
+                            href="https://kutahya.ktb.gov.tr/TR-353234/kutahya-mutfak-kulturu.html">Detaylar &raquo;</a>
+                    </p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <img src="futbol.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="Spor">
+                    <h2 class="fw-normal">Sporlar</h2>
+                    <p>Kütahya'da spor</p>
+                    <p><a class="btn btn-secondary" href="https://tr.wikipedia.org/wiki/K%C3%BCtahya%27da_spor">Detaylar
+                            &raquo;</a></p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <img src="vazo.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="Tarih">
+                    <h2 class="fw-normal">Tarih</h2>
+                    <p>Kütahya tarihi</p>
+                    <p><a class="btn btn-secondary" href="http://www.kutahya.gov.tr/tarihce">Detaylar &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1">Kütahya'nın Ekonomisi</h2>
+                <p class="lead">Kütahya Ekonomisi
+
+                    Kütahya’nın ekonomisi büyük ölçüde tarım ve sanayiye dayanır. Çalışan nüfusun yaklaşık %70’i tarım,
+                    hayvancılık, ormancılık ve benzeri alanlarda faaliyet gösterir. Tarımdan elde edilen gelir, gayri
+                    safi hasılanın yaklaşık %30’unu oluşturur. Sanayi, madencilik ve inşaat sektörlerinde çalışanların
+                    oranı ise %20 civarındadır.
+
+                    Tarım ve Hayvancılık
+                    Kütahya, verimli ovalarında en çok tahıl üretimi yapılan illerden biridir. Buğday, arpa, mısır,
+                    nohut, fasulye, şekerpancarı, patates, haşhaş, soğan ve ayçiçeği gibi ürünler yetiştirilir. Sebze ve
+                    meyve üretimi de yaygındır. Kiraz ve vişnesi meşhurdur; ayrıca elma, armut, şeftali, ceviz ve çilek
+                    de yetiştirilir. Modern tarım teknikleri ve gübre kullanımı yaygındır. Tarım alanlarının büyük
+                    bölümü tahıl üretimine ayrılmıştır.
+
+                    Hayvancılık, özellikle dağlık bölgelerde önemli bir geçim kaynağıdır. Koyun yetiştiriciliği
+                    yaygındır; koyunu keçi ve sığır takip eder. Ayrıca arıcılık gelişmekte, tavukçuluk ve tavşan
+                    yetiştiriciliği artmaktadır.
+
+                    Ormancılık
+                    Kütahya, orman varlığı bakımından zengin bir ildir. Ormanlar yaklaşık 500 bin hektarlık bir alanı
+                    kaplar. Ağaçlandırma çalışmaları devam etmektedir.
+
+                    Madencilik ve Enerji
+                    Kütahya, Türkiye’nin maden çeşitliliği ve rezervi açısından en zengin illerindendir. Linyit, krom,
+                    gümüş, bor, manyezit, antimuan, kobalt, cıva, demir, mermer gibi birçok maden çıkarılmaktadır.
+                    Seyitömer, Tavşanlı ve Tunçbilek gibi bölgelerde kömür ve manyezit işletmeleri faaliyet
+                    göstermektedir.
+
+                    Enerji üretimi, Tunçbilek ve Seyitömer Termik Santralleri ile Kayaköy Hidroelektrik Santrali
+                    üzerinden sağlanır. Bu tesisler sanayiye de enerji desteği sunar.
+
+                    Sanayi
+                    Kütahya’da sanayi giderek gelişmektedir. En büyük sanayi kuruluşları arasında Kütahya Şeker
+                    Fabrikası, Azot Fabrikaları, Kütahya Porselen, çini fabrikaları, tuğla ve kiremit fabrikaları, Emet
+                    Bor İşletmesi, Simav Halı Fabrikası ve dokuma sanayi yer alır. Kütahya, aynı zamanda ateşe dayanıklı
+                    tuğla üretimi ve ihracatında da öne çıkmaktadır.
+
+                    Çinicilik ve halıcılık, hem kültürel hem ekonomik anlamda şehre özgü önemli el sanatlarıdır. 1764
+                    yılında Kütahya’da yapılan dünyadaki ilk toplu iş sözleşmesi, çini ustalarıyla işverenler arasında
+                    imzalanmıştır. Bu, Kütahya’nın sosyal ve ekonomik tarihindeki önemli bir olaydır.
+
+                    Ulaşım
+                    Kütahya, kara ve demiryolu ulaşımı açısından stratejik bir noktadadır. Eskişehir, Afyon, Konya,
+                    İzmir, Balıkesir ve Çanakkale gibi illerle kara yoluyla bağlantılıdır. Ayrıca demiryolu ile
+                    Eskişehir, Ankara, İzmir ve Bandırma gibi şehirlere ulaşım sağlanır.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="cinii.jpg" class="img-fluid rounded shadow d-block mx-auto" alt="Ekonomi ">
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1">Kütahya'nın Kültürel Gelenekleri</h2>
+                <p class="lead">Kütahya, Anadolu'nun kadim kentlerinden biri olarak tarihsel derinliği ve kültürel
+                    zenginliğiyle dikkat çeker. Antik çağlardan günümüze uzanan çok katmanlı tarihsel birikimi, şehrin
+                    geleneksel yapısını şekillendirmiştir. Frigler, Lidyalılar, Persler, Romalılar, Bizanslılar ve
+                    nihayetinde Selçuklu ile Osmanlı hâkimiyetinde kalan Kütahya, bu medeniyetlerin izlerini taşıyan
+                    nadir şehirlerden biridir. Bu derin tarihsel arka plan, bölgenin geleneksel kültürünü belirgin bir
+                    şekilde etkilemiştir.
+
+                    1. Geleneksel El Sanatları ve Zanaatkârlık
+                    Kütahya’nın kültürel mirasının en güçlü ögelerinden biri, el sanatlarıdır. Özellikle çinicilik,
+                    sadece yerel değil, ulusal ve uluslararası düzeyde tanınan bir sanat dalıdır. 14. yüzyıldan itibaren
+                    gelişen çini üretimi, Osmanlı döneminde zirveye ulaşmış; cami, türbe ve saray süslemelerinde Kütahya
+                    çinileri sıklıkla tercih edilmiştir. Çini sanatı bugün de şehrin sembolü olarak yaşatılmakta,
+                    usta-çırak ilişkisiyle yeni kuşaklara aktarılmaktadır.
+
+                    Ayrıca halıcılık, ahşap oyma, semer yapımı ve dokumacılık gibi geleneksel zanaatlar da Kütahya
+                    kültürünün önemli parçalarıdır. Özellikle Tavşanlı ve Gediz yöresinde kilim dokumacılığı halen
+                    sürdürülmektedir.
+
+                    2. Giyim Kuşam ve Kına Gecesi Gelenekleri
+                    Kütahya'nın kırsal kesimlerinde geleneksel kıyafet kullanımı hâlâ yer yer devam etmektedir. Kadınlar
+                    için işlemeli bindallılar, şalvarlar, başörtüleri ve gümüş kemerler; erkekler için ise cepken,
+                    şalvar, kuşak ve fes geleneksel giysilerdir. Özellikle düğün törenlerinde bu kıyafetler gururla
+                    giyilir.
+
+                    Kına gecesi ritüelleri Kütahya'da oldukça belirgin ve gelenekseldir. Gelinin ellerine kına
+                    yakılmadan önce ağıt ve kına türküleri eşliğinde duygusal bir atmosfer yaratılır. Bu törenler,
+                    kadınlar arasında dayanışma ve kültürel aktarımın önemli bir aracıdır.
+
+                    3. Yeme-İçme Kültürü
+                    Kütahya mutfağı, Anadolu'nun tipik özelliklerini taşımakla birlikte kendine özgü lezzetler de
+                    barındırır. Sıkıcık çorbası, cimcik (erişte) makarnası, göce köftesi, haşhaşlı çörek, dolamber
+                    böreği ve Kütahya güveci yöreye özgü başlıca yemeklerdir. Ayrıca, haşhaş ve tarhana kullanımı bölge
+                    mutfağının temel karakteristiklerindendir.
+
+                    Yemek kültürü, sadece damak tadını değil, aynı zamanda misafirperverlik anlayışını da yansıtır.
+                    Misafir sofralarının özenle hazırlanması, yemeğin ikram sırasına dikkat edilmesi ve sofrada yapılan
+                    dualar, geleneksel yaşamın bir parçasıdır.
+
+                    4. Halk Müziği, Oyunlar ve Folklor
+                    Kütahya'nın halk müziği, zengin ezgi yapısı ve sözlü anlatımlarıyla dikkat çeker. Zeybek oyunları,
+                    özellikle Simav ve Gediz çevresinde yaygın olarak oynanır. Zurna ve davul eşliğinde sergilenen bu
+                    oyunlar, erkekler arasında cesaret, asalet ve dayanışma göstergesi olarak kabul edilir.
+
+                    Kadınlar arasında ise kaşık oyunları, el ele halkalar oluşturularak oynanan oyunlar ve mani söyleme
+                    gibi etkinlikler yaygındır. Bu oyunlar, genellikle düğün ve bayram gibi toplu törenlerde sergilenir.
+
+                    5. İnanç ve Ritüeller
+                    Kütahya'da halk inançları, İslamî değerlerin yanı sıra eski Türk inanç sistemlerinin izlerini de
+                    taşır. Nazar boncuğu, kurşun dökme, diş buğdayı, lohusa şerbeti gibi uygulamalar bu inanç sisteminin
+                    halk arasında yaşatılan örneklerindendir. Ayrıca Hıdırellez, Nevruz ve kandil geceleri gibi
+                    zamanlarda yapılan toplu dualar, piknikler ve adak uygulamaları da yaygındır.
+
+                    Şehirde türbe ziyaretleri de önemli bir yer tutar. Dumlupınar Şehitliği, Sipaş Camii Türbesi ve
+                    Germiyan Beyliği döneminden kalan yapılar, halkın dua ve ziyaret ettiği önemli mekânlardır.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="mevlana.jpg" class="img-fluid rounded shadow d-block mx-auto" alt="Mevlana">
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fx-normal lh-1">Kütahya'nın Doğal Güzellikleri</h2>
+                <p class="lead">Kütahya, sahip olduğu zengin kültürel mirası, doğal güzellikleri ve tarihi dokusuyla
+                    dikkat çeken şehirlerden biridir. Ege Bölgesi’nin iç kesimlerinde yer alan bu şehir, tarih boyunca
+                    Frigler, Lidyalılar, Persler, Roma ve Bizans gibi birçok medeniyete ev sahipliği yapmıştır. Anadolu
+                    Selçuklu Devleti ve Germiyanoğulları Beyliği dönemlerinde ise önemli bir kültür ve ticaret merkezi
+                    haline gelmiştir. Osmanlı Devleti’ne katılmasıyla birlikte şehir, sanat ve mimari açıdan gelişmiş,
+                    özellikle çini sanatıyla ün kazanmıştır.
+
+                    Kütahya’nın doğal yapısı, ormanlarla kaplı dağları, vadileri, akarsuları ve yaylaları ile oldukça
+                    çeşitlidir. Termal kaynaklar açısından da zengin olan şehir, kaplıcalarıyla hem sağlık turizmine hem
+                    de yerli ve yabancı turistlerin ilgisine açık bir yapıya sahiptir. Eynal, Yoncalı ve Ilıca gibi
+                    kaplıca merkezleri, şifalı sularıyla tanınmakta ve pek çok ziyaretçiye hizmet vermektedir. Ayrıca
+                    Domaniç ve Murat Dağı gibi doğal alanlar, doğa yürüyüşleri, kampçılık ve dağcılık gibi etkinlikler
+                    için elverişli alanlar sunmaktadır.
+
+                    Kütahya’nın en bilinen özelliklerinden biri de çini sanatıdır. Kökleri Selçuklu ve Osmanlı
+                    dönemlerine kadar uzanan bu sanat dalı, günümüzde de şehrin simgesi olmaya devam etmektedir.
+                    Kütahya'da bulunan Çini Müzesi ve birçok çini atölyesi, bu sanatı yakından tanımak isteyen
+                    ziyaretçiler için önemli duraklardandır. Şehirde el emeğiyle üretilen çiniler, hem estetik hem de
+                    kültürel değer taşımakta; yurt içi ve yurt dışına ihraç edilmektedir.
+
+                    Kütahya Kalesi, Aizanoi Antik Kenti, Germiyan Sokağı, Dönenler Camii, Ulu Camii ve Hıdırlık gibi
+                    tarihi mekânlar, kentin kültürel kimliğini yansıtan önemli yapılar arasında yer alır. Özellikle
+                    Aizanoi Antik Kenti, Zeus Tapınağı ve antik tiyatrosuyla dikkat çekerken, tarihe meraklı gezginler
+                    için eşsiz bir atmosfer sunmaktadır. Germiyan Sokağı ise restore edilmiş tarihi konakları,
+                    geleneksel mimarisi ve sanatsal faaliyetleriyle şehrin geçmişine ışık tutmaktadır.
+
+                    Bunların yanı sıra Kütahya, kültürel festivalleri, geleneksel el sanatları, yöresel yemekleri ve
+                    misafirperver halkıyla da ön plana çıkar. Şehirde düzenlenen çini festivalleri, folklor gösterileri
+                    ve yöresel ürün pazarları, hem halkın kültürel bağlarını canlı tutmakta hem de turizmi
+                    desteklemektedir. Özellikle Kütahya güveci, cimcik eriştesi ve tarhana gibi yöresel lezzetler,
+                    gastronomi meraklıları için özel bir yere sahiptir.
+
+                    Tüm bu özellikleriyle Kütahya, yalnızca tarih ve kültür turizmi açısından değil, aynı zamanda doğa
+                    ve sağlık turizmi bakımından da Türkiye’nin önemli şehirlerinden biri olarak öne çıkmaktadır. Gerek
+                    geçmişin izlerini taşıyan tarihi yapılarıyla, gerekse doğanın sunduğu huzur verici ortamlarıyla
+                    Kütahya, keşfedilmeyi bekleyen zenginliklerle dolu bir Anadolu kentidir.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="domanic.jpg" class="img-fluid rounded shadow d-block mx-auto" alt="Domaniç">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
