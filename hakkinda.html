@@ -5,118 +5,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Hakkımda</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f4;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .container {
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
-            background-color: #fff;
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            margin: 10px 0;
-            border-radius: 10px;
-        }
-        .links{
-            display: flex;
-            justify-content: flex-start;
-            gap: 40px;
-            margin: 20px ;
-        }
-        .links a {
-            color: #007bff;
-            text-decoration: none;
-            font-size:20px;
-            padding: 8px 12px;
-        }
-
-        .links a:hover {
-            text-decoration: underline;
-        }
-        .image-grid {
-           display: grid;
-           grid-template-columns: repeat(2,1fr);
-           gap: 15px;
-           max-width: 900px;
-           margin: 20px auto;
-        }
-        .image-grid img{
-            width: 100%;
-            height: auto;
-            aspect-ratio: 4/3;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .image-grid img:hover{
-            transform:scla(1.05);
-        }
-    </style>
-    
+    <link rel="stylesheet" href="stil.css">
 </head>
 
-<body>
-    <header>
+<body class="hakkinda">
+    <nav>
+        <div class="navbar">
+            <a href="login.php">Giriş Sayfası</a>
+            <a href="hakkinda.html">Hakkımda</a>
+            <a href="ozgecmis.html">Öz Geçmiş</a>
+            <a href="ilgialani.php">İlgi Alanım</a>
+            <a href="mirasimiz.html">Mirasımız</a>
+            <a href="sehrim.html">Şehrim</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="login.php">Çıkış Yap</a>
+        </div>
+    </nav>
+
+    <header class="hakkinda">
         <h1>Hakkımda</h1>
     </header>
     <div class="container">
         <h2>Merhaba ben Rüveyda</h2>
-        <p>Bilgisayar mühendisliği öğrencisiyim.Yeni bilgiler öğrenmeyi ve yeni yerleri görmeyi seviyorum.</p>
-        <h3>Hobilerim</h3>
-        <ul>
-            <li>Yüzmek</li>
-            <li>Bisiklet Sürmek</li>
-            <li>Puzzle çözmek</li>
-            <li>Tatlı yapmak</li>
-            <li>Müzik dinlemek</li>
-        </ul>
-        <h3>Etkinlikler</h3>
-        <ul>
-            <li>Sudoku çözmek</li>
-            <li>Satranç oynamak</li>
-            <li>Dizi izlemek</li>
-            <li>Yürüyüş yapmak</li>
-            <li>Okçuluk</li>
-        </ul>
-        <h3>Sevdiğim sporlar</h3>
-        <ul>
-            <li>Yüzmek</li>
-            <li>Bisiklet sürmek</li>
-            <li>Fitness</li>
+        <p>Sakarya Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. Yeni bilgiler öğrenmeyi ve yeni yerleri görmeyi seviyorum.</p>
+
+        <div class="row">
+            <div class="column">
+            <h3>Hobilerim</h3>
+            <ul>
+                <li>Yüzmek</li>
+                <li>Bisiklet Sürmek</li>
+                <li>Puzzle çözmek</li>
+                <li>Satranç oynamak</li>
+                <li>Tatlı yapmak</li>
+                <li>Müzik dinlemek</li>
+                <li>Dizi izlemek</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h3>Etkinlikler</h3>
+            <ul>
+                <li>Sudoku çözmek</li>
+                <li>Satranç oynamak</li>
+                <li>Dizi izlemek</li>
+                <li>Yürüyüş yapmak</li>
+                <li>Okçuluk</li>
+                <li>Yüzmek</li>
+                <li>Bisiklet sürmek</li>
+            </ul>
+        </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <h3>Favori Filmler</h3>
+                <ul>
+                    <li>Yıldızlararası</li>
+                    <li>Sevginin Gücü</li>
+                    <li>Labirent</li>
+                    <li>Ayla</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Favori Diziler</h3>
+                <ul>
+                    <li>Friends</li>
+                    <li>Prison Break</li>
+                    <li>From</li>
+                    <li>Alice in Bonderland</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <h3>Favori Oyuncular</h3>
+                <ul>
+                    <li>Dylan O'Brien</li>
+                    <li>Wentworth Miller</li>
+                    <li>Wentworth Miller</li>
+                    <li>Sarah Wayne Callies</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Favori Şarkıcılar</h3>
+                <ul>
+                    <li>Gökhan Türkmen</li>
+                    <li>Murat Dalkılıç</li>
+                    <li>Güncel Gürsel Artıktay</li>
+                    <li>Mabel Matiz</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <h3>Favori Yemekler</h3>
+                <ul>
+                    <li>Yağlama</li>
+                    <li>Beyti</li>
+                    <li>Mantı</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Favori Tatlılar</h3>
+                <ul>
+                    <li>Kazandibi</li>
+                    <li>Magnolya</li>
+                    <li>Profiterol</li>
+                </ul>
+            </div>
+        </div>
+
         </ul>
         <div class="image-grid">
             <img src="at-ok.jpg" alt="At Okçuluk">
             <img src="bisiklet.webp" alt="Bisiklet">
             <img src="satranç.jpg" alt="Satranç">
-            <img src="sudoku.jpg" alt="Sudoku" >
+            <img src="sudoku.jpg" alt="Sudoku">
         </div>
         <h3>Bağlantılar</h3>
         <div class="links">
             <a href="https://github.com/Ruveyda4354" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.sakarya.edu.tr/" target="_blank" rel="noopener noreferrer">SAÜ</a>
             <a href="https://cs.sakarya.edu.tr/" target="_blank" rel="noopener noreferrer">SAÜ BM</a>
         </div>
+    </div>
+
     </div>
 </body>
 

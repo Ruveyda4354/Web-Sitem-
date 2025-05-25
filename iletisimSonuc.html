@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form Sonuç Ekranı</title>
+    <link rel="stylesheet" href="stil.css">
+</head>
+
+<body class="iletisimsonuc">
+    <nav>
+        <div class="navbar">
+            <a href="login.php">Giriş Sayfası</a>
+            <a href="hakkinda.html">Hakkımda</a>
+            <a href="ozgecmis.html">Öz Geçmiş</a>
+            <a href="ilgialani.php">İlgi Alanım</a>
+            <a href="mirasimiz.html">Mirasımız</a>
+            <a href="sehrim.html">Şehrim</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="login.php">Çıkış Yap</a>
+        </div>
+    </nav>
+    <header class="iletisimsonuc">
+        <h1>Form Sayfası</h1>
+    </header>
+    <div style="display: flex; justify-content: center; margin-top: 30px;">
+        <div class="kutu" id="iletisimSonuc"></div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+             const veri = JSON.parse(localStorage.getItem("formData"));
+             const div = document.getElementById("iletisimSonuc");
+        
+       
+        if (veri) {
+            div.innerHTML = `
+                <h2>Form Bilgileri</h2>
+                <p><strong>Ad Soyad:</strong>${veri.adsoyad}</p>
+                <p><strong>E-posta:</strong>${veri.email}</p>
+                <p><strong>Telefon:</strong>${veri.tel}</p>
+                <p><strong>Cinsiyet:</strong>${veri.cinsiyet}</p>
+                <p><strong>Konu:</strong>${veri.konu}</p>
+                <p><strong>Mesaj:</strong>${veri.mesaj}</p>
+                <p><strong>Haber almak istiyor mu?:</strong>${veri.haber ? 'Evet' : 'Hayır'}</p>
+                `;
+            localStorage.removeItem("formData");
+        }
+        else {
+            div.innerHTML = "<p>Form verisi bulunamadı.</p>";
+        }
+        });
+    </script>
+</body>
+
+</html>

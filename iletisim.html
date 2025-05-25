@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8" />
     <title>İletişim Sayfası</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
     <link rel="stylesheet" href="stil.css">
 </head>
 
@@ -35,7 +34,11 @@
                     <input type="text" v-model="form.email">
                 </label>
                 <label>Telefon:
-                    <input type="text" v-model="form.tel">
+                    <div class="tel-container">
+                        <span class="tel-prefix">0</span>
+                        <input type="text" v-model="form.tel" v-mask="'### ### ## ##'" maxlength="13"
+                            placeholder="5## ### ## ##">
+                    </div>
                 </label>
                 <label>Cinsiyet:
                     <label class="radio-label"><input type="radio" value="Kadın" v-model="form.cinsiyet">Kadın</label>
@@ -55,14 +58,19 @@
                 <label>
                     <input type="checkbox" v-model="form.haber">Haber almak istiyorum.
                 </label>
-                <div class="error" v-if="hata">{{hata}}</div>
                 <button type="button" @click="jsilegonder">Gönder(JS)</button>
                 <button type="submit">Gönder(Vue)</button>
                 <button type="button" @click="temizle">Temizle</button>
             </form>
+            <p v-if="hata" style="color: red; margin-top: 10px;">{{hata}}</p>
         </div>
     </div>
+     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-the-mask@0.11.1/dist/vue-the-mask.min.js"></script>
+ 
     <script>
+        Vue.use(VueTheMask);
+
         new Vue({
             el: '#app',
             data: {
@@ -73,13 +81,14 @@
                     cinsiyet: '',
                     konu: '',
                     mesaj: '',
-                    haber: false
+                    haber: false,
                 },
-                hata: ''
+                hata: '',
             },
             methods: {
                 jsilegonder() {
                     const f = this.form;
+                    const temizTel = "0" + (f.tel || "").replace(/\D/g, "");
                     if (!f.adsoyad.trim() || !f.email.trim() || !f.tel.trim() || !f.cinsiyet.trim() || !f.konu.trim() || !f.mesaj.trim()) {
                         alert("Lütfen tüm alanları doldurun.");
                         return;
@@ -88,15 +97,19 @@
                         alert("Geçerli bir e-posta adresi giriniz.");
                         return;
                     }
-                    if (!/^\d+$/.test(f.tel.trim())) {
-                        alert("Telefon numarası sadece rakamlardan oluşmalıdır.");
+                    if (!/^0\d{10}$/.test(temizTel)) {
+                        alert("Telefon numarası 0 ile başlamalı ve toplam 11 tane hane olmalıdır.");
                         return;
                     }
-                    localStorage.setItem("formData", JSON.stringify(f));
+                    localStorage.setItem("formData", JSON.stringify({ ...f, tel: temizTel }));
                     window.location.href = "iletisimSonuc.html";
+
+
                 },
                 vueilegonder() {
                     const f = this.form;
+                    const temizTel = "0" + (f.tel || "").replace(/\D/g, '');
+
                     if (!f.adsoyad.trim() || !f.email.trim() || !f.tel.trim() || !f.cinsiyet.trim() || !f.konu.trim() || !f.mesaj.trim()) {
                         this.hata = "Lütfen tüm alanları doldurun.";
                         return;
@@ -105,28 +118,31 @@
                         this.hata = "Geçerli bir e-posta adresi giriniz.";
                         return;
                     }
-                    if (!/^\d+$/.test(f.tel.trim())) {
-                        this.hata = "Telefon numarası sadece rakamlardan oluşmalıdır.";
+                    if (!/^0\d{10}$/.test(temizTel)) {
+                        this.hata = "Telefon numarası 0 ile başlamalı ve toplam 11 hane olmalıdır.";
                         return;
                     }
-                    this.hata = '';
-                    localStorage.setItem("formData", JSON.stringify(f));
+                    this.hata = "";
+                    localStorage.setItem("formData", JSON.stringify({ ...f, tel: temizTel }));
                     window.location.href = "iletisimSonuc.html";
+
                 },
                 temizle() {
                     this.form = {
-                        adsoyad: '',
-                        email: '',
-                        tel: '',
-                        cinsiyet: '',
-                        konu: '',
-                        mesaj: '',
-                        haber: false
+                        adsoyad: "",
+                        email: "",
+                        tel: "",
+                        cinsiyet: "",
+                        konu: "",
+                        mesaj: "",
+                        haber: false,
                     };
-                    this.hata = '';
+                    this.hata = "";
                 }
             }
         });
+
+
     </script>
 </body>
 

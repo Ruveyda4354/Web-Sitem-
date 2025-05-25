@@ -1,82 +1,23 @@
 <!DOCTYPE html>
 <html lang="tr">
-    <head>
-        <meta charset="UTF-8">
-        <title>Şehrim - Kütahya</title>
-        <style>
-            body{
-                font-family: Arial, Helvetica, sans-serif;
-                line-height: 1.6;
-                margin: 0;
-                padding: 0;
-            }
-            header{
-                background-color: #004d66;
-                color: white;
-                padding: 20px;
-                text-align: center;
-            }
-            .slider{
-                display: flex;
-                overflow: auto;
-                gap: 10px;
-                padding: 10px;
-                background-color: #e6f2ff;
-            }
-            .slider img{
-                width: 246px;
-                height: 150px;
-                object-fit: cover;
-                cursor: pointer;
-                border: 2px solid transparent;
-            }
-            .slider img:hover{
-                border:2px solid #004d66;
-            }
-            section{
-                padding: 20px;
-            }
-            h2{
-                color: #004d66;
-            }
-            .content{
-                max-width: 800px;
-                margin: auto;
-            }
-            hr{
-                border: 1px solid #cccccc;
-            }
-            nav{
-                background-color: #333;
-                color: #fff;
-                padding: 10px 0;
-            }
-            .navbar{
-                display:flex ;
-                justify-content: center;
-                gap: 40px;
-            }
-            .navbar a{
-                color: #fff;
-                text-decoration: none;
-                font-size: 20px;
-                padding: 10px 15px;
-            }
-            .navbar a:hover{
-                background-color: #444;
-                border-radius: 5px;
-            }
-        </style>
-    </head>
-<body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Şehrim - Kütahya</title>
+    <link rel="stylesheet" href="stil.css">
+</head>
+
+<body class="sehrim">
     <nav>
         <div class="navbar">
             <a href="login.php">Giriş Sayfası</a>
             <a href="hakkinda.html">Hakkımda</a>
             <a href="ozgecmis.html">Öz Geçmiş</a>
-            <a href="ilgialani.html">İlgi Alanım</a>
+            <a href="ilgialani.php">İlgi Alanım</a>
             <a href="mirasimiz.html">Mirasımız</a>
-            <a href= "iletisim.html" >İletişim</a>
+            <a href="sehrim.html">Şehrim</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="login.php">Çıkış Yap</a>
         </div>
     </nav>
     <header>
@@ -84,36 +25,49 @@
     </header>
 
     <div class="slider">
-        <a href="https://tr.wikipedia.org/wiki/K%C3%BCtahya_(il)" target="blank"><img src="nufus.jpg" alt="Kütahya Nüfus"></a>
-        <a href="http://www.kutahya.gov.tr/aizanoi-antik-kenti-yeni" target="blank"><img src="aizanoi.jpg" alt="Aizanoi Antik Kenti"></a>
-        <a href="https://www.aa.com.tr/tr/turkiyenin-otantik-lezzetleri/kutahyanin-damak-catlatan-lezzeti/1265079" target="blank"><img src="govec.jpg" alt="Göveç Yemeği"></a>
+        <a href="https://tr.wikipedia.org/wiki/K%C3%BCtahya_(il)" target="blank"><img src="nufus.jpg"
+                alt="Kütahya Nüfus"></a>
+        <a href="http://www.kutahya.gov.tr/aizanoi-antik-kenti-yeni" target="blank"><img src="aizanoi.jpg"
+                alt="Aizanoi Antik Kenti"></a>
+        <a href="https://www.aa.com.tr/tr/turkiyenin-otantik-lezzetleri/kutahyanin-damak-catlatan-lezzeti/1265079"
+            target="blank"><img src="govec.jpg" alt="Göveç Yemeği"></a>
         <a href="https://kutahyacinisanayi.com/" target="blank"><img src="cini.jpg" alt="Çini"></a>
-        <a href="https://tr.wikipedia.org/wiki/Enne_Baraj%C4%B1" target="blank"><img src="enne.jpg" alt="Enne barajı"></a>
-        <a href="http://kutahya.gov.tr/germiyan-sokagi-yeni" target="blank"><img src="germiyan.jpg" alt="Germiyan Sokağı"></a>
+        <a href="https://tr.wikipedia.org/wiki/Enne_Baraj%C4%B1" target="blank"><img src="enne.jpg"
+                alt="Enne barajı"></a>
+        <a href="http://kutahya.gov.tr/germiyan-sokagi-yeni" target="blank"><img src="germiyan.jpg"
+                alt="Germiyan Sokağı"></a>
     </div>
-    
+
     <div class="content">
         <section id="nufus">
             <hr>
             <h2>Kütahya'nın Nüfusu</h2>
-            <p>2024 yılı verilerine göre Kütahya'nın nüfusu yaklaşık<strong> 580.000</strong> kişidir.Ege bölgesinde bulunur.Hem coğrafi hem de kültürel olarak önemli bir noktadadır.Çini,seramik,ebru sanatlarıyla öne çıkmaktadır.</p>
+            <p>2024 yılı verilerine göre Kütahya'nın nüfusu yaklaşık<strong> 580.000</strong> kişidir.Ege bölgesinde
+                bulunur.Hem coğrafi hem de kültürel olarak önemli bir noktadadır.Çini,seramik,ebru sanatlarıyla öne
+                çıkmaktadır.</p>
             <hr>
         </section>
 
-        <section id="gezilecek"> 
+        <section id="gezilecek">
             <h2>Gezilecek Yerler</h2>
             <ul>
-                <li><strong>Dumlupınar Şehitliği</strong> Dumlupınar Meydan Muharebesi'nde şehit olan Türk askerleri anısına Kütahya'nın Dumlupınar ilçesinde 1992 yılında Kültür Bakanlığı tarafından yaptırılan şehitliktir. </li>
-                <li><strong>Frigya Vadileri</strong>Kaya oyma yapıları ve doğal güzellikleriyle büyüleyici bir tarihi mirastır.</li>
-                <li><strong>Aizanoi Antik Kenti</strong>Roma dönemine ait iyi korunmuş Zeus Tapınağı ve antik tiyatrosuyla dikkat çeken tarihi bir yerleşimdir.</li>
-                <li><strong>Tarihi Kütahya Konakları</strong>Osmanlı mimarisini yansıtan esteik yapılarıyla şehrin kültürel dokusunu yaşatır.</li>
+                <li><strong>Dumlupınar Şehitliği</strong> Dumlupınar Meydan Muharebesi'nde şehit olan Türk askerleri
+                    anısına Kütahya'nın Dumlupınar ilçesinde 1992 yılında Kültür Bakanlığı tarafından yaptırılan
+                    şehitliktir. </li>
+                <li><strong>Frigya Vadileri</strong>Kaya oyma yapıları ve doğal güzellikleriyle büyüleyici bir tarihi
+                    mirastır.</li>
+                <li><strong>Aizanoi Antik Kenti</strong>Roma dönemine ait iyi korunmuş Zeus Tapınağı ve antik
+                    tiyatrosuyla dikkat çeken tarihi bir yerleşimdir.</li>
+                <li><strong>Tarihi Kütahya Konakları</strong>Osmanlı mimarisini yansıtan esteik yapılarıyla şehrin
+                    kültürel dokusunu yaşatır.</li>
             </ul>
             <hr>
         </section>
 
         <section id="yemek">
             <h2>Yemek Kültürü</h2>
-            <p>Kütahya mutfağı, geleneksel Anadolu yemeklerini yaşatan zengin ve lezzetli bir mutfaktır.Etli ve hamur işi yemekler ön plandadır.</p>
+            <p>Kütahya mutfağı, geleneksel Anadolu yemeklerini yaşatan zengin ve lezzetli bir mutfaktır.Etli ve hamur
+                işi yemekler ön plandadır.</p>
             <ul>
                 <li><strong>Göveç</strong>-Toprak güveçte et yemeği.-</li>
                 <li><strong>Haşhaşlı Çörek</strong>-Haşhaş ezmesiyle yapılan meşhur çörek.-</li>
@@ -130,7 +84,8 @@
                 <li>Çini ve seramit sanatları Kütahya'nın en bilinen kültürel miraslarındandır.</li>
                 <li>Osmanlı döneminden kalan camiler,medreseler ve hamamlar şehirde çok sayıda bulunur.</li>
                 <li>Yöresel yemekler,özellikle göveç ve tirit,Kütahya mutfağının sevilen lezzetlerindendir.</li>
-                <li>Halk oyunları arasında en önemlisi zeybek oyunudur.Zeybek,cesaret ve mertliği simgeler,efe kıyafetleriyle oynanır</li>
+                <li>Halk oyunları arasında en önemlisi zeybek oyunudur.Zeybek,cesaret ve mertliği simgeler,efe
+                    kıyafetleriyle oynanır</li>
                 <li>Ayrıca geleneksel el sanatları ve festivaller de kültürel hayatı canlı tutar.</li>
             </ul>
             <hr>
@@ -140,12 +95,14 @@
             <p>Kütahya'da spor alanında öncelikle futbol ve güreş yaygındır.</p>
             <ul>
                 <li>Şehirde Kütahyaspor, futbolun önemli temsilcisidir.</li>
-                <li>Geleneksel Türk güreşi de bölgenin sevilen spor dallarından biridir ve sık sık turnuvalar düzenlenir.</li>
+                <li>Geleneksel Türk güreşi de bölgenin sevilen spor dallarından biridir ve sık sık turnuvalar
+                    düzenlenir.</li>
                 <li>Modern spor dallarında da amatör kulüpler faaliyet gösterir.</li>
             </ul>
             <hr>
         </section>
-        
+
     </div>
 </body>
+
 </html>

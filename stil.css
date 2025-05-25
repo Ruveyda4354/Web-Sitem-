@@ -1,0 +1,526 @@
+/* Ortak Stiller*/
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap:wrap;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 15px;
+}
+
+.navbar a:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/*Hakkımda sayfasının stilleri*/
+
+body.hakkinda {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #a77878;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+body.hakkinda header {
+    background-color: #555;
+    color: #f4f4f4;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+body.hakkinda .container {
+    padding: 20px;
+    max-width: 900px;
+    margin:0 auto;
+    background-color: #dfbebe;
+    text-align: center;
+}
+
+body.hakkinda h2 {
+    color: #333;
+}
+
+body.hakkinda .row{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+body.hakkinda .column{
+    flex: 1;
+    min-width: 250px;
+    padding: 10px;
+}
+
+body.hakkinda .column ul{
+    list-style-type: disc;
+    padding-left: 20px;
+    list-style-position: inside;
+    text-align: left;
+    margin: 0 auto;
+    display: inline-block;
+}
+body.hakkinda .column h3{
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+body.hakkinda img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+body.hakkinda .links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    margin: 20px;
+}
+
+body.hakkinda .links a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 12px;
+}
+
+body.hakkinda .links a:hover {
+    text-decoration: underline;
+}
+
+body.hakkinda .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+body.hakkinda .image-grid img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+body.hakkinda .image-grid img:hover {
+    transform: scale(1.05);
+}
+
+/*Şehrim sayfası için stiller*/
+
+body.sehrim  {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+body.sehrim header {
+    background-color: #004d66;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+body.sehrim .slider {
+    display: flex;
+    overflow: auto;
+    gap: 10px;
+    padding: 10px;
+    background-color: #e6f2ff;
+}
+
+body.sehrim .slider img {
+    width: 246px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+body.sehrim .slider img:hover {
+    border: 2px solid #004d66;
+}
+
+body.sehrim section {
+    padding: 20px;
+}
+
+body.sehrim h2 {
+    color: #004d66;
+}
+
+body.sehrim .content {
+    max-width: 800px;
+    margin: auto;
+}
+
+body.sehrim hr {
+    border: 1px solid #cccccc;
+}
+
+/* Mirasımız sayfası için stiller*/
+
+
+body.mirasimiz header {
+    background-color: #555;
+    color: #f4f4f4;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+body.mirasimiz .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem
+    }
+}
+
+body.b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: #0000001a;
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em #0000001a, inset 0 .125em .5em #00000026
+}
+
+body.b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh
+}
+
+body.mirasimiz .bi {
+    vertical-align: -.125em;
+    fill: currentColor
+}
+
+body.mirasimiz .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden
+}
+
+body.mirasimiz .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch
+}
+
+body.mirasimiz .btn-bd-primary {
+    --bd-violet-bg: #712cf9;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #6528e0;
+    --bs-btn-hover-border-color: #6528e0;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #5a23c8;
+    --bs-btn-active-border-color: #5a23c8
+}
+
+body.mirasimiz .bd-mode-toggle {
+    z-index: 1500
+}
+
+body.mirasimiz .bd-mode-toggle .bi {
+    width: 1em;
+    height: 1em
+}
+
+body.mirasimiz .bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important
+}
+
+body.mirasimiz #myCarousel img {
+    max-height: 500px;
+    object-fit: cover;
+    margin-top: 5px;
+}
+
+/*Öz geçmiş sayfası için stiller*/
+
+body.ozgecmis  {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    background-color: rgb(235, 247, 210);
+}
+
+body.ozgecmis header {
+    background-color: #555;
+    color: #f4f4f4;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+body.ozgecmis .resume-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+
+body.ozgecmis .resume-card {
+    max-width: 900px;
+    width: 100%;
+    background-color: rgb(127, 167, 127);
+    border: 5px ridge rgb(179, 221, 179);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.2);
+}
+
+body.ozgecmis h1,
+body.ozgecmis h5 {
+    font-weight: bold;
+}
+
+body.ozgecmis .text-danger {
+    color: #9842ca;
+}
+
+/*İletişim sayfası için stiller*/
+
+body.iletisim  {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #b67e9b;
+    margin: 0;
+    padding: 0;
+}
+
+body.iletisim h1 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+}
+
+body.iletisim #app {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+body.iletisim .container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 90vw;
+    margin-top: 20px;
+}
+
+body.iletisim form {
+    width: 100%;
+}
+
+body.iletisim form label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.tel-container{
+    display: flex;
+    align-items: center;
+}
+.tel-prefix{
+    padding: 6px 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    font-family: monospace;
+}
+.tel-container input{
+    border-radius: 0 4px 4px 0;
+    border: 1px solid #ccc;
+    border-left: none;
+    padding: 6px;
+    width: 100%;
+}
+
+
+body.iletisim form input[type="text"],
+body.iletisim form input[type="email"],
+body.iletisim form input[type="tel"],
+body.iletisim form select,
+body.iletisim form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+body.iletisim button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+body.iletisim button:hover {
+    background-color: #0056b3;
+}
+
+body.iletisim .radio-label {
+    font-weight: normal;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+body.iletisim .error {
+    color: red;
+    font-size: 14px;
+}
+
+body.iletisim header {
+    background-color: #555;
+    color: #f4f4f4;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/*İlgi alanı sayfası stili*/
+
+body.ilgialani{
+    background-color: #fff;
+
+}
+body.ilgialani .container{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+background-color: #fff;
+}
+body.ilgialani .card{
+width:250px;
+border:1px solid #ccc;
+padding:10px;
+border-radius:10px;
+box-shadow:2px 2px 10px rgba(0,0,0,0.1);
+font-family:Arial;
+color: #000;
+}
+body.ilgialani .card img{
+width:100%;
+border-radius:5px;
+}
+body.ilgialani .baslik{
+display:flex;
+align-items:center;
+font-size:24px;
+font-weight:bold;
+margin:40px 0 20px;
+text-align:center;
+font-family:Arial;
+}
+body.ilgialani .baslik::before,
+body.ilgialani .baslik::after{
+content:'';
+flex:1;
+border-bottom:3px solid #555;
+margin:0 15px;
+}
+body.ilgialani header{
+background-color:#555;
+color:#f4f4f4;
+margin:0;
+padding:20px 0;
+text-align:center;
+}
+
+/*İletişim sonuç sayfasının stilleri*/
+
+body.iletisimsonuc {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body.iletisimsonuc .kutu{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #aaa;
+    max-width: 600px;
+    width: 90%;
+}
+body.iletisimsonuc h2{
+    margin-top:0;
+    color: #333;
+}
+
+body.iletisimsonuc p{
+    margin: 10px 0;
+}
+body.iletisimsonuc strong{
+    display: inline-block;
+    width: 180px;
+}
+body.iletisimsonuc header{
+background-color:#555;
+color:#f4f4f4;
+padding:20px 0;
+text-align:center;
+width: 100%;
+margin-bottom: 20px;
+
+}
